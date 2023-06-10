@@ -61,7 +61,7 @@ public class ProductController {
     @PostMapping(value = "/Produits")
     public ResponseEntity<Product> ajouterProduit(@RequestBody @Valid Product product) {
         
-        //if(product.getPrix()==0) throw new ProduitGratuitException("Le prix de vente ne peut pas être égal à zéro !");
+        if(product.getPrix()==0) throw new ProduitGratuitException("Le prix de vente ne peut pas être égal à zéro !");
         Product productAdded = productDao.save(product);
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
