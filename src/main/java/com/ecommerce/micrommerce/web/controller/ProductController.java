@@ -81,5 +81,10 @@ public class ProductController {
         return processedMap;
     }
     
+    @GetMapping(value = "/Produits/asc")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        return productDao.findByOrderByNomAsc();
+    }
+    
     //trierProduitsParOrdreAlphabetique
 }
