@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
+
 //@JsonFilter("monFiltreDynamique")
 @Entity
 public class Product {
